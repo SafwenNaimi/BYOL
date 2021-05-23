@@ -1,0 +1,49 @@
+# Dataset Parameters
+num_classes: 5
+# define lebels to class dictionary
+labels_to_class:
+  0: 'airplane'
+  1: 'bird'
+  2: 'car'
+  3: 'cat'
+  4: 'gazelle'
+
+normalize: True
+
+
+#paths
+root_path: 'C:\Users\Safwen\.spyder-py3\BYOL\PyTorch-BYOL-master'
+data_path: 'dataset'
+exp_type: 'self-supervised' # 'supervised' or 'self-supervised'
+save_dir: 'lin_exp'
+imgs_dir: 'images'
+labels_dir: 'annotations'
+log: 'train.log'
+feat_extract_exp_dir: 'feat'
+features: 'features_1'
+
+#pca
+pca_dim: False #218
+
+#model parameters
+network: 'log_reg'
+lr: 5e-4
+momentum: 9e-1
+scheduler: True
+opt: 'sgd'#'sgd','adam'
+
+# Training Parameters
+num_epochs: 20
+batch_size: 16
+mean_norm: False
+img_sz: 96
+val_split: 0.15
+cuda_num: 0
+use_cuda: False
+data_aug: True
+
+#saving parameters
+save_intermediate_weights: 2 # After how many epoch to save the weights
+
+
+

@@ -1,0 +1,61 @@
+# Dataset Parameters
+num_classes: 5
+# define lebels to class dictionary
+labels_to_class:
+  0: 'airplane'
+  1: 'bird'
+  2: 'car'
+  3: 'cat'
+  4: 'gazelle'
+
+mean_val: [0.51290169 0.51136089 0.49742605]#[147.16463878,147.02933698,121.82977662]
+std_val: [0.21390466 0.22544737 0.24699091]#[23.35500145,24.29656621,53.20534792]
+
+
+#paths
+root_path: 'C:\Users\Safwen\.spyder-py3\BYOL\PyTorch-BYOL-master'
+data_path: 'dataset'
+exp_type: 'supervised' # 'supervised' or 'self-supervised'
+save_dir: 'sl_without_BYOL'
+imgs_dir: 'images'
+labels_dir: 'annotations'
+log: 'train.log'
+
+# Self Supervised Params
+pretext: False
+#num_rot: 4
+
+#supervised params
+use_pretrained: False
+pretrained_dir: 'sl'
+pretrained_weights: 'resnet18_best.pth'
+
+use_ssl: False
+ssl_pretrained_exp_path: 'May12_16-38-45_DESKTOP-STAHH2H'
+ssl_weight: 'model.pth'
+
+#model parameters
+network: 'resnet18'
+lr: 5e-4
+momentum: 9e-1
+scheduler: True
+opt: 'sgd'
+
+# Training Parameters
+num_epochs: 50
+batch_size: 16
+mean_norm: False
+img_sz: 96
+val_split: 0.15
+cuda_num: 0
+use_cuda: False
+data_aug: True #['randomhorizontalflip','randomcrop']# None
+
+# pretrained model
+
+
+#saving parameters
+save_intermediate_weights: 2 # After how many epoch to save the weights
+
+
+

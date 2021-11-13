@@ -129,7 +129,7 @@ class MLP(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(dim, hidden_size),
             nn.BatchNorm1d(hidden_size),
-            nn.ReLU(inplace=True),
+            nn.LeakyReLU(inplace=True),
             nn.Linear(hidden_size, projection_size),
             
             
